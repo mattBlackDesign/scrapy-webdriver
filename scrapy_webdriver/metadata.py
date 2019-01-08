@@ -6,7 +6,7 @@ This project bundles some helpers to work with webdriver in scrapy projects.
 title = 'scrapy_webdriver'
 nice_title = 'Webdriver helpers for scrapy'
 nice_title_no_spaces = nice_title.replace(' ', '')
-version = '0.2'
+version = '0.3'
 description = 'Helpers to work with webdriver in scrapy projects'
 authors = ['Nicolas Cadou']
 authors_string = ', '.join(authors)

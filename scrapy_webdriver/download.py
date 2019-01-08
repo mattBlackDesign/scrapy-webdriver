@@ -46,5 +46,7 @@ class WebdriverDownloadHandler(object):
         """Perform an action on a previously webdriver-loaded page."""
         log.msg('Running webdriver actions %s' % request.url, level=log.DEBUG)
         request.actions.perform()
+        print "testing1"
         import time; time.sleep(2)
+        print "testing2"
         return WebdriverResponse(request.url, request.manager.webdriver)
