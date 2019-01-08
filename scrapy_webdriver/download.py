@@ -26,6 +26,7 @@ class WebdriverDownloadHandler(object):
     def download_request(self, request, spider):
         """Return the result of the right download method for the request."""
         if self._enabled and isinstance(request, WebdriverRequest):
+            print "test567"
             if isinstance(request, WebdriverActionRequest):
                 download = self._do_action_request
             else:

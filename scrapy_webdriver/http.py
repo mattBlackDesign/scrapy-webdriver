@@ -1,6 +1,8 @@
 from scrapy.http import Request, TextResponse
 from selenium.webdriver.common.action_chains import ActionChains
 
+from action_chains import WaitingActionChains
+
 
 class WebdriverRequest(Request):
     """A Request needed when using the webdriver download handler."""
@@ -37,7 +39,7 @@ class WebdriverResponse(TextResponse):
         kwargs.setdefault('body', webdriver.page_source)
         kwargs.setdefault('encoding', 'utf-8')
         super(WebdriverResponse, self).__init__(url, **kwargs)
-        self.actions = ActionChains(webdriver)
+        self.actions = WaitingActionChains(webdriver)
         self.webdriver = webdriver
 
     def action_request(self, **kwargs):
